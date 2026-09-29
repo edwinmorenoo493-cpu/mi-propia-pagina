@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Animación del Cohete</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family: Arial;
+        }
+
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🚀 Animación del Cohete</h1>
+
+    <img id="cohete" src="cohete_01.png">
+
+    <script>
+        let imagenes = [
+            "cohete_01.png",
+            "cohete_02.png",
+            "cohete_03.png",
+            "cohete_04.png",
+            "cohete_05.png"
+        ];
+
+        let posicion = 0;
+
+        setInterval(function() {
+            posicion++;
+
+            if (posicion >= imagenes.length) {
+                posicion = 0;
+            }
+
+            document.getElementById("cohete").src = imagenes[posicion];
+
+        }, 500);
+    </script>
+
+</body>
+</html>
